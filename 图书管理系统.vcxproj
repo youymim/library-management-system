@@ -139,13 +139,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="bookmanage.cpp" />
-    <ClCompile Include="图书管理系统.cpp" />
+    <ClCompile Include="BookManage.cpp" />
+    <ClCompile Include="Book.cpp" />
+    <ClCompile Include="library-management-system.cpp" />
+    <ClCompile Include="record.cpp" />
+    <ClCompile Include="User.cpp" />
+    <ClCompile Include="练习.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="book.h" />
-    <ClInclude Include="bookmanage.h" />
-    <ClInclude Include="user.h" />
+    <ClInclude Include="Book.h" />
+    <ClInclude Include="BookManage.h" />
+    <ClInclude Include="Record.h" />
+    <ClInclude Include="User.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

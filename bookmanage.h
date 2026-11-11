@@ -1,20 +1,23 @@
 #pragma once
 #include"book.h"
 #include"user.h"
+#include"record.h"
 #include<iostream>
 #include<string>
 #include<fstream>
 #include<cstdio>
 #include<limits>
-class bookmanage {
+class BookManage {
+private:
+
 public:
-	bookmanage();
-	user login();
-	void showmanu();
-	void borrowbooks(const user& u);
-	void returnbooks(const user& u);
-	void addbooks();
-	void checkbooks();
-	void checkrecord();
-	~bookmanage();
+	BookManage();
+	void Login(const std::string& name,int id);
+	void ShowManu();
+	void BorrowBooks(const std::string& name,int id);
+	void ReturnBooks(const std::string& name,int id);
+	void AddBooks();
+	void CheckBooks();
+	void CheckRecord();
+	~BookManage();
 };

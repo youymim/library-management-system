@@ -3,11 +3,21 @@
 using namespace std;
 int main()
 {
-	bookmanage bm;
-	user u = bm.login();
+	BookManage bm;
+	cout << "登录或注册" << endl;
+	string name;
+	int id;
+	cout << "请输入姓名和编号：" << endl;
+	cin >> name >> id;
+	int isadmin = 0;
+	cout << "是否为管理员？" << endl;
+	cout << "1.不是" << "   " << "2.是" << endl;
+	cin >> isadmin;
+	User u(name, id, isadmin);
+	bm.Login(name, id);
 	while (true)
 	{
-		bm.showmanu();
+		bm.ShowManu();
 		int select = 0;
 		cin >> select;
 		if (cin.fail())              // 读数字失败了
@@ -22,19 +32,19 @@ int main()
 		switch (select)
 		{
 		case 1:
-			bm.borrowbooks(u);
+			bm.BorrowBooks(name,id);
 			break;
 		case 2:
-			bm.returnbooks(u);
+			bm.ReturnBooks(name,id);
 			break;
 		case 3:
-			bm.addbooks();
+			bm.AddBooks();
 			break;
 		case 4:
-			bm.checkbooks();
+			bm.CheckBooks();
 			break;
 		case 5:
-			bm.checkrecord();
+			bm.CheckRecord();
 			break;
 		case 0:
 			cout << "成功退出" << endl;
